@@ -1,0 +1,12 @@
+os
+cv2
+tensorflow
+numpy
+matplotlib
+imageio
+opencv
+gdown
+google-cloud-bigquery
+google-cloud-storage
+ipdb
+ipykernel
