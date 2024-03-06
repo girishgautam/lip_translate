@@ -10,3 +10,4 @@ google-cloud-bigquery
 google-cloud-storage
 ipdb
 ipykernel
+dlib
