@@ -5,6 +5,7 @@ from tensorflow.keras.layers import Conv3D, Activation, MaxPool3D, TimeDistribut
 from tensorflow.keras.callbacks import ModelCheckpoint, LearningRateScheduler
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping
+import numpy as np
 
 
 vocab = [x for x in "abcdefghijklmnopqrstuvwxyz'?!123456789 "]
