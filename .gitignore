@@ -32,6 +32,4 @@ mlruns
 # Challengify - test challengification files
 *_challengify*
 
-zipped_vids_1000_s1.npz
-
-zipped_vids_2000_3.npz
+*.npz
