@@ -15,8 +15,6 @@ num_to_char = tf.keras.layers.StringLookup(
 
 
 
-
-
 def initiate_model():
     model = Sequential()
     model.add(Conv3D(64, (3, 3, 3), input_shape=(75, 30, 70, 1), padding='same'))
@@ -45,3 +43,18 @@ def initiate_model():
     model.add(Dense(char_to_num.vocabulary_size()+1, kernel_initializer='he_normal', activation='softmax'))
 
     return model
+
+def predict_video(model, video_frames):
+    # Assuming `video_frames` is your input data # Ensure this is correctly implemented
+    video_frames_batch = np.expand_dims(video_frames, axis=0)
+
+    # Get predictions
+    prediction = model.predict(video_frames_batch)
+
+    # The sequence length should match the batch size of 'prediction'
+    sequence_length = [len(video_frames)]  # Replace this with the correct sequence length for your data
+
+    # Decode the predictions
+    decoded_prediction = tf.keras.backend.ctc_decode(prediction, sequence_length, greedy=False)[0][0].numpy()
+    predicted_text = tf.strings.reduce_join(num_to_char(decoded_prediction)).numpy().decode('utf-8')
+    return predicted_text
