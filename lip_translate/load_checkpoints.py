@@ -1,4 +1,4 @@
-from lip_translate.initiate_model import initiate_model, predict_video
+from initiate_model import initiate_model, predict_video
 
 
 # # Load the model
@@ -6,7 +6,6 @@ def load_checkpoints(data_frames):
     model=initiate_model()
 
     checkpoint_dir = 'model_mathilda_2000_12mar'
-
 
     epoch_number = 100  # for example, to load from checkpoint_epoch-06
     checkpoint_path = f"{checkpoint_dir}/checkpoint_epoch-{epoch_number:02d}"
