@@ -11,7 +11,7 @@ RESIZE = (70,30)
 DATFILE =  "shape_predictor_68_face_landmarks.dat"
 
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('/home/mathildaweston/code/girishgautam/lip_translate/py_files/shape_predictor_68_face_landmarks.dat')
 
 def final_vids(VIDEO_PATH):
     cropped_img_list=[] # Iterate on video files
@@ -88,4 +88,4 @@ def final_vids(VIDEO_PATH):
     return processed_vids
 
 #testing
-final_vids("/Users/alessiastroni/code/girishgautam/lip_translate/raw_data/s1/bbaf2n.mpg")
+final_vids("/home/mathildaweston/code/girishgautam/lip_translate/raw_data/test_mathilda_mpg")
